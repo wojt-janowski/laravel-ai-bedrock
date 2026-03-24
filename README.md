@@ -1,21 +1,19 @@
-# Laravel AI Bedrock Provider
+# This package has moved
 
-AWS Bedrock provider for the [Laravel AI SDK](https://github.com/laravel/ai).
+## **This package has been renamed to [`clinically/laravel-ai-bedrock`](https://github.com/clinically-au/laravel-ai-bedrock).**
 
-This package adds first-class AWS Bedrock support to the Laravel AI SDK, allowing you to use Bedrock-hosted models (Claude, Titan, etc.) with Laravel's agent system, embeddings, and streaming APIs.
+Update your `composer.json`:
 
-## Why this package exists
+```bash
+composer remove wojt-janowski/laravel-ai-bedrock
+composer require clinically/laravel-ai-bedrock
+```
 
-The official `laravel/ai` SDK does not include a Bedrock provider, and the upstream `prism-php/bedrock` package is missing streaming support and has unresolved bugs. This package:
+Update your namespace imports from `WojtJanowski\LaravelAiBedrock` to `Clinically\LaravelAiBedrock`.
 
-1. Bridges `laravel/ai` and AWS Bedrock via `clinically/prism-bedrock`
-2. Uses [`clinically/prism-bedrock`](https://github.com/clinically-au/prism-bedrock), a fork of `prism-php/bedrock` that adds:
-   - **Streaming support** for both Converse and Anthropic schemas (tool calling included)
-   - **ToolChoiceMap fix** for invalid payloads in both schemas
+---
 
-These fixes have been submitted upstream. Once merged, this package will switch back to the official `prism-php/bedrock`.
-
-> **Note:** This package was previously published as `wojt-janowski/laravel-ai-bedrock`. If you're migrating, update your `composer.json` to use `clinically/laravel-ai-bedrock`.
+# Laravel AI Bedrock Provider (archived)
 
 ## Requirements
 
